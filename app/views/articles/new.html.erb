@@ -1,0 +1,11 @@
+<div class="row justify-content-center mx-auto">
+  <div class="col-sm-8 col-sm-offset-2 py-2">
+    <h1>Create new article</h1>
+    <%= form_with model: @article do |f| %>
+      <%= f.text_field :title, placeholder: "Insert a title", class: "form-control mb-3" %>
+      <%= f.text_area :content, placeholder: "Insert the content for the article", class: "form-control mb-3" %>
+      <%= f.submit('Create', class: "btn btn-secondary w-100") %>
+    <% end %>
+    <%= link_to "Back to list", articles_path, class: "text-center d-block mt-3" %>
+  </div>
+</div>

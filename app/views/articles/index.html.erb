@@ -1,0 +1,5 @@
+<div class="row justify-content-center mx-auto">
+  <% @articles.each do |article| %>
+    <%= render 'article', article: article %>
+  <% end %>
+</div>

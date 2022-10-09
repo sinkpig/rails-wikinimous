@@ -1,0 +1,21 @@
+<div class="row justify-content-center mx-auto">
+  <div class="col-sm-8 col-sm-offset-2 py-2">
+    <article class="px-5">
+      <%= link_to articles_path, class: "d-block" do %>
+        <i class='fa-solid fa-arrow-left me-1'></i>Go back
+      <% end %>
+      <h2 class="d-inline-block" style="font-family: 'Roboto Slab';"><%= @article.title %></h2>
+      <%= link_to edit_article_path do %>
+        <i class='fa fa-pencil ms-2'></i>
+      <% end %>
+      <%= link_to article_path(@article.id), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} do %>
+        <i class='fa fa-trash ms-2'></i>
+      <% end %>
+      <picture>
+        <img src="https://source.unsplash.com/random/700x350/?<%= @article.title %>" alt="Image" class="img-fluid w-100">
+      </picture>
+      <hr>
+      <%= @article.content %>
+    </article>
+  </div>
+</div>

@@ -1,0 +1,9 @@
+<div class="col-3 mb-3">
+  <div class="card h-100">
+    <img src="https://source.unsplash.com/random/200x150/?<%= article.title %>" alt="Image" class="card-img-top">
+    <div class="card-body h-100">
+      <%= link_to article.title, article_path(article), class: "card-title h4 stretched-link", style: "font-family: 'Roboto Slab'" %>
+      <p class="card-text mt-2"><%= "#{article.content.first(70)}..." %></p>
+    </div>
+  </div>
+</div>
